@@ -223,6 +223,7 @@
                 </div>
             </div>
             <div class="card-body p-0">
+                <input type="hidden" name="userId" id="userId" value="{{ Auth::id() }}">
                 <div class="custom-datatable-filter table-responsive">
                     <table class="table" id="paymentReportList">
                         <thead class="thead-light">
@@ -249,3 +250,5 @@
 
 
 @endsection
+
+@include('report::provider.includes')

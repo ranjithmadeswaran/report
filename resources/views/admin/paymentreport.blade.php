@@ -285,3 +285,5 @@
 
 
 @endsection
+
+@include('report::admin.includes')
