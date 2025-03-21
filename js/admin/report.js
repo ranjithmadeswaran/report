@@ -189,6 +189,9 @@ if (pageValue === "admin.payment-report") {
                 filter_type: filter_type,
             },
             success: function (response) {
+                $('#loader-table').addClass('d-none');
+                $(".label-loader, .input-loader").hide();
+                $('#paymentReportList, .real-label, .real-input').removeClass('d-none');
                 if (
                     response.success &&
                     response.data &&
@@ -453,9 +456,6 @@ if (pageValue === "admin.payment-report") {
                         language: datatableLang,
                     });
                 }
-                $('#loader-table').addClass('d-none');
-                $(".label-loader, .input-loader").hide();
-                $('#paymentReportList, .real-label, .real-input').removeClass('d-none');
             },
             error: function () {
                 toastr.error("Unable to fetch session data. Please try again.");
